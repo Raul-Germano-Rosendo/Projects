@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SunnySky Weather</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-sun"></i> Sky Weather</h1>
+            <p>Accurate weather info at your fingertips</p>
+        </div>
+
+        <div class="main-content">
+            <div class="theme-toggle">
+                <button id="theme-btn"><i class="fas fa-moon"></i></button>
+            </div>
+
+            <div class="search-container">
+                <input type="text" id="city-input" placeholder="Enter city name...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <button id="current-location-btn" class="location-btn">
+                <i class="fas fa-location-arrow"></i> Use Current Location
+            </button>
+
+            <div id="loading" class="loading">
+                <i class="fas fa-spinner fa-spin fa-3x"></i>
+                <p>Loading weather data...</p>
+            </div>
+
+            <div id="error-message" class="error-message">
+                <i class="fas fa-exclamation-circle"></i>
+                <p id="error-text">Error message will appear here</p>
+            </div>
+
+            <div id="weather-card" class="weather-card">
+                <div class="city-name">Search for a city</div>
+                <div class="weather-icon"><i class="fas fa-sun"></i></div>
+                <div class="current-temp">--°C</div>
+                <div class="weather-desc">Enter a city name or use your current location</div>
+
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <div class="detail-label">Feels Like</div>
+                        <div class="detail-value">--°C</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Humidity</div>
+                        <div class="detail-value">--%</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Wind Speed</div>
+                        <div class="detail-value">-- m/s</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Pressure</div>
+                        <div class="detail-value">-- hPa</div>
+                    </div>
+                </div>
+
+                <div class="forecast" id="forecast"></div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Powered by OpenWeather | <span id="current-date"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
