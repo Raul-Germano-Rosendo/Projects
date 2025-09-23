@@ -199,6 +199,7 @@ body {
 }
 
 /* Dark Mode */
+/* Bug correction num 1 */
 .dark-mode { background: linear-gradient(135deg,#1E1E2F 0%,#3A3A4F 100%); color: #ddd; }
 .dark-mode .container { background: rgba(30,30,40,0.95); }
 .dark-mode .weather-card { background: rgba(60,60,80,0.5); }
