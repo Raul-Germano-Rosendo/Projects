@@ -11,13 +11,11 @@ const themeBtn = document.getElementById('theme-btn');
 
 const API_KEY = '2bdda6eb635833b1b7cac7e4aa210f26';
 
-// Date
+
 currentDate.textContent = new Date().toLocaleDateString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
 
-// Theme toggle
 themeBtn.addEventListener('click', () => document.body.classList.toggle('dark-mode'));
 
-// Event listeners
 searchBtn.addEventListener('click', searchCity);
 cityInput.addEventListener('keypress', (e) => e.key === 'Enter' && searchCity());
 currentLocationBtn.addEventListener('click', getCurrentLocationWeather);
